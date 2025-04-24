@@ -1,0 +1,20 @@
+// In <script> tag or script.js file
+function checkText() {
+  const text = document.getElementById("textInput").value;
+  const result = document.getElementById("result");
+
+  // Placeholder logic
+  if (!text.trim()) {
+    result.textContent = "Please enter some text.";
+    return;
+  }
+
+  // Very basic placeholder "AI detection"
+  if (text.length > 200) {
+    result.textContent = "⚠️ Likely AI-generated (based on length only — this is a placeholder)";
+  } else {
+    result.textContent = "✅ Likely human-written (again, just placeholder logic)";
+  }
+}
+
+
