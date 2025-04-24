@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Text Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Text Detector</h1>
+    <textarea id="textInput" placeholder="Paste your text here..."></textarea>
+    <button onclick="checkText()">Check if AI-Generated</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkText() {
+      const text = document.getElementById("textInput").value;
+      const result = document.getElementById("result");
+
+      // Placeholder logic
+      if (!text.trim()) {
+        result.textContent = "Please enter some text.";
+        return;
+      }
+
+      // Placeholder "detection" logic
+      if (text.length > 200) {
+        result.textContent = "⚠️ Likely AI-generated (based on length only — this is a placeholder)";
+      } else {
+        result.textContent = "✅ Likely human-written (again, just placeholder logic)";
+      }
+    }
+  </script>
+</body>
+</html>
